@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		6C8A030A2BBD668100FBADAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A03092BBD668100FBADAC /* AppDelegate.swift */; };
 		6C8A030C2BBD668100FBADAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A030B2BBD668100FBADAC /* SceneDelegate.swift */; };
-		6C8A030E2BBD668100FBADAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A030D2BBD668100FBADAC /* ViewController.swift */; };
+		6C8A030E2BBD668100FBADAC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A030D2BBD668100FBADAC /* ListViewController.swift */; };
 		6C8A03112BBD668100FBADAC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A03102BBD668100FBADAC /* Base */; };
 		6C8A03132BBD668200FBADAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A03122BBD668200FBADAC /* Assets.xcassets */; };
 		6C8A03162BBD668200FBADAC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A03152BBD668200FBADAC /* Base */; };
+		6CB70B412BC3EE2B004322EE /* HoroscopeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB70B402BC3EE2B004322EE /* HoroscopeViewCell.swift */; };
+		6CB906022BC525AD009B9C33 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB906012BC525AD009B9C33 /* Horoscope.swift */; };
+		6CB906042BC52649009B9C33 /* HoroscopeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB906032BC52649009B9C33 /* HoroscopeProvider.swift */; };
+		6CB906082BC52B0B009B9C33 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB906072BC52B0B009B9C33 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C8A03062BBD668100FBADAC /* Horoscope-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Horoscope-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8A03092BBD668100FBADAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C8A030B2BBD668100FBADAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C8A030D2BBD668100FBADAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C8A030D2BBD668100FBADAC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6C8A03102BBD668100FBADAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8A03122BBD668200FBADAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8A03152BBD668200FBADAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8A03172BBD668200FBADAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB70B402BC3EE2B004322EE /* HoroscopeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewCell.swift; sourceTree = "<group>"; };
+		6CB906012BC525AD009B9C33 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		6CB906032BC52649009B9C33 /* HoroscopeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeProvider.swift; sourceTree = "<group>"; };
+		6CB906072BC52B0B009B9C33 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		6C8A03082BBD668100FBADAC /* Horoscope-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6CB906002BC5258E009B9C33 /* ViewControllers */,
+				6CB906062BC52ABA009B9C33 /* Views */,
+				6CB906052BC52AA4009B9C33 /* ViewCells */,
+				6CB905FF2BC52589009B9C33 /* Data */,
 				6C8A03092BBD668100FBADAC /* AppDelegate.swift */,
 				6C8A030B2BBD668100FBADAC /* SceneDelegate.swift */,
-				6C8A030D2BBD668100FBADAC /* ViewController.swift */,
-				6C8A030F2BBD668100FBADAC /* Main.storyboard */,
 				6C8A03122BBD668200FBADAC /* Assets.xcassets */,
-				6C8A03142BBD668200FBADAC /* LaunchScreen.storyboard */,
 				6C8A03172BBD668200FBADAC /* Info.plist */,
 			);
 			path = "Horoscope-iOS";
+			sourceTree = "<group>";
+		};
+		6CB905FF2BC52589009B9C33 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6CB906012BC525AD009B9C33 /* Horoscope.swift */,
+				6CB906032BC52649009B9C33 /* HoroscopeProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6CB906002BC5258E009B9C33 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C8A030D2BBD668100FBADAC /* ListViewController.swift */,
+				6CB906072BC52B0B009B9C33 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6CB906052BC52AA4009B9C33 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6CB70B402BC3EE2B004322EE /* HoroscopeViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		6CB906062BC52ABA009B9C33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C8A03142BBD668200FBADAC /* LaunchScreen.storyboard */,
+				6C8A030F2BBD668100FBADAC /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8A030E2BBD668100FBADAC /* ViewController.swift in Sources */,
+				6C8A030E2BBD668100FBADAC /* ListViewController.swift in Sources */,
 				6C8A030A2BBD668100FBADAC /* AppDelegate.swift in Sources */,
 				6C8A030C2BBD668100FBADAC /* SceneDelegate.swift in Sources */,
+				6CB906042BC52649009B9C33 /* HoroscopeProvider.swift in Sources */,
+				6CB906022BC525AD009B9C33 /* Horoscope.swift in Sources */,
+				6CB70B412BC3EE2B004322EE /* HoroscopeViewCell.swift in Sources */,
+				6CB906082BC52B0B009B9C33 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

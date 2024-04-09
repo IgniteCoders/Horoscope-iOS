@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 48 48" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+<title>pisces</title>
+<g fill="#000000" class="nc-icon-wrapper">
+<path d="M13 21a10 10 0 0 1-8.849-5.349A19.472 19.472 0 0 0 4 18c0 11.25 9 19 9 19s9-7.75 9-19a19.472 19.472 0 0 0-.151-2.349A10 10 0 0 1 13 21z" opacity=".3">
+</path>
+<path d="M35 27a10 10 0 0 1 8.849 5.349A19.472 19.472 0 0 0 44 30c0-11.25-9-19-9-19s-9 7.75-9 19a19.472 19.472 0 0 0 .151 2.349A10 10 0 0 1 35 27z" opacity=".3">
+</path>
+<path d="M13 37s9-7.75 9-19a16.1 16.1 0 0 0-9-15 16.1 16.1 0 0 0-9 15c0 11.25 9 19 9 19z" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
+</path>
+<path d="M13 36v2a8 8 0 0 1-8 8v-2a8 8 0 0 1 8-8z" transform="rotate(180 9 41)">
+</path>
+<path d="M13 36a8 8 0 0 1 8 8v2a8 8 0 0 1-8-8v-2z">
+</path>
+<path d="M43 2v2a8 8 0 0 1-8 8v-2a8 8 0 0 1 8-8z">
+</path>
+<path d="M27 2a8 8 0 0 1 8 8v2a8 8 0 0 1-8-8V2z" transform="rotate(180 31 7)">
+</path>
+<circle cx="11" cy="11" r="2">
+</circle>
+<path d="M4.151 15.651a9.994 9.994 0 0 0 17.7 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2">
+</path>
+<path d="M3 18v12h5c-3-5-4-12-4-12z">
+</path>
+<path d="M35 11s-9 7.75-9 19a16.1 16.1 0 0 0 9 15 16.1 16.1 0 0 0 9-15c0-11.25-9-19-9-19z" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
+</path>
+<circle cx="37" cy="37" r="2">
+</circle>
+<path d="M43.849 32.349a9.994 9.994 0 0 0-17.7 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2">
+</path>
+<path d="M45 30V18h-5c3 5 4 12 4 12z">
+</path>
+</g>
+</svg>
