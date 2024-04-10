@@ -9,14 +9,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    // MARK: Properties
+    
     var horoscope: Horoscope? = nil
     var isFavorite: Bool = false
+    
+    // MARK: Outlets
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var signImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
     @IBOutlet weak var favoriteButtomItem: UIBarButtonItem!
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,8 @@ class DetailViewController: UIViewController {
         getHoroscopeLuck()
     }
     
+    // MARK: Actions
+    
     @IBAction func setFavorite(_ sender: UIBarButtonItem) {
         isFavorite = !isFavorite
         if (isFavorite) {
@@ -45,6 +53,8 @@ class DetailViewController: UIViewController {
         }
         setFavoriteButtomItem()
     }
+    
+    // MARK: Data
     
     func setFavoriteButtomItem() {
         if (isFavorite) {
@@ -65,16 +75,5 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

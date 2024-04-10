@@ -9,6 +9,8 @@ import UIKit
 
 class HoroscopeViewCell: UITableViewCell {
     
+    // MARK: Outlets
+    
     @IBOutlet var titleLabel: UILabel!
     
     @IBOutlet var subtitleLabel: UILabel!
@@ -16,6 +18,8 @@ class HoroscopeViewCell: UITableViewCell {
     @IBOutlet var signImageView: UIImageView!
     
     @IBOutlet weak var favoriteButton: UIButton!
+    
+    // MARK: Data
     
     func render(horoscope: Horoscope) {
         titleLabel.text = horoscope.name

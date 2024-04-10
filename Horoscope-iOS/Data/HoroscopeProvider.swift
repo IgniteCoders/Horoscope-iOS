@@ -10,6 +10,8 @@ import UIKit
 
 class HoroscopeProvider {
     
+    // MARK: Data Providers
+    
     static func getHoroscopes() -> [Horoscope] {
         let list: [Horoscope] = [
             Horoscope(id: "aries", name: "Aries", image: UIImage(named: "horoscope-icons/aries")!, dates: "March 21 to April 19"),
@@ -32,6 +34,8 @@ class HoroscopeProvider {
         return getHoroscopes().filter { $0.id == id }.first!
     }
     
+    // MARK: API Network calls
+    
     static func getHoroscopeLuck(horoscopeId: String) async throws -> String {
         var result: String
         let url = URL(string: "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=\(horoscopeId)&day=TODAY")
@@ -52,6 +56,8 @@ class HoroscopeProvider {
         
         return result
     }
+    
+    // MARK: Utils
     
     struct RuntimeError: Error {
         let description: String

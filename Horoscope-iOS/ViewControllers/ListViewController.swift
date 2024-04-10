@@ -32,14 +32,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.reloadData()
     }
     
-    
-    
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let homeViewController = segue.destination as? HomeViewController {
-            homeViewController.text = "Hola"
-          }
-    }*/
-    
     // MARK: TableView DataSource & Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +60,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    // MARK: Segues
+    // MARK: Segues & Navigation
     
     /*@IBSegueAction func navigateToDetail(_ coder: NSCoder) -> DetailViewController? {
         
