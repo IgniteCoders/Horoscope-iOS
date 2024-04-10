@@ -15,9 +15,16 @@ class HoroscopeViewCell: UITableViewCell {
     
     @IBOutlet var signImageView: UIImageView!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     func render(horoscope: Horoscope) {
         titleLabel.text = horoscope.name
         subtitleLabel.text = horoscope.dates
         signImageView.image = horoscope.image
+        
+        let favoriteHoroscope = UserDefaults.standard.string(forKey: "FAVORITE_HOROSCOPE") ?? ""
+        let isFavorite = horoscope.id == favoriteHoroscope
+        
+        favoriteButton.isHidden = !isFavorite
     }
 }
