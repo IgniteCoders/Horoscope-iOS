@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     // MARK: Properties
     
     var horoscope: Horoscope? = nil
+    var horoscopeIndex:Int = -1
     var isFavorite: Bool = false
     
     // MARK: Outlets
@@ -28,18 +29,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let favoriteHoroscope = UserDefaults.standard.string(forKey: "FAVORITE_HOROSCOPE") ?? ""
-        isFavorite = horoscope?.id == favoriteHoroscope
-        
-        setFavoriteButtomItem()
-        
-        
-        self.navigationItem.title = horoscope?.name
-        nameLabel.text = horoscope?.name
-        signImageView.image = horoscope?.image
-        
-        getHoroscopeLuck()
+        loadData()
     }
     
     // MARK: Actions
@@ -54,7 +44,39 @@ class DetailViewController: UIViewController {
         setFavoriteButtomItem()
     }
     
+    @IBAction func goToPrev(_ sender: UIButton) {
+        if (horoscopeIndex == 0) {
+            horoscopeIndex = HoroscopeProvider.getHoroscopes().count
+        }
+        horoscopeIndex -= 1
+        horoscope = HoroscopeProvider.getHoroscopes()[horoscopeIndex]
+        loadData()
+    }
+    
+    @IBAction func goToNext(_ sender: UIButton) {
+        horoscopeIndex += 1
+        if (horoscopeIndex == HoroscopeProvider.getHoroscopes().count) {
+            horoscopeIndex = 0
+        }
+        horoscope = HoroscopeProvider.getHoroscopes()[horoscopeIndex]
+        loadData()
+    }
+    
     // MARK: Data
+    
+    func loadData() {
+        let favoriteHoroscope = UserDefaults.standard.string(forKey: "FAVORITE_HOROSCOPE") ?? ""
+        isFavorite = horoscope?.id == favoriteHoroscope
+        
+        setFavoriteButtomItem()
+        
+        
+        self.navigationItem.title = horoscope?.name
+        nameLabel.text = horoscope?.name
+        signImageView.image = horoscope?.image
+        
+        getHoroscopeLuck()
+    }
     
     func setFavoriteButtomItem() {
         if (isFavorite) {

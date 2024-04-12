@@ -34,6 +34,9 @@ class HoroscopeProvider {
         return getHoroscopes().filter { $0.id == id }.first!
     }
     
+    static func getIndexOf(horoscope: Horoscope) -> Int {
+        return getHoroscopes().firstIndex(where: {$0.id == horoscope.id})!
+    }
     // MARK: API Network calls
     
     static func getHoroscopeLuck(horoscopeId: String) async throws -> String {

@@ -81,6 +81,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let viewController: DetailViewController = segue.destination as! DetailViewController
         
         viewController.horoscope = horoscope
+        viewController.horoscopeIndex = indexPath.row
     }
 }
 
